@@ -13,6 +13,9 @@
           </e>
           <e p="Cell.cs" t="Include" />
           <e p="CellView.cs" t="Include" />
+          <e p="Components" t="Include">
+            <e p="WorldSpaceButton.cs" t="Include" />
+          </e>
           <e p="Extensions" t="Include">
             <e p="EnumerableExtensions.cs" t="Include" />
             <e p="VectorExtensions.cs" t="Include" />
@@ -28,10 +31,23 @@
             <e p="IService.cs" t="Include" />
             <e p="ServiceLocator.cs" t="Include" />
           </e>
+          <e p="Singletons" t="Include">
+            <e p="MonoSingleton.cs" t="Include" />
+            <e p="ScriptableSingleton.cs" t="Include" />
+            <e p="Singleton.cs" t="Include" />
+          </e>
+          <e p="StateManagement" t="Include">
+            <e p="IState.cs" t="Include" />
+            <e p="StateMachine.cs" t="Include" />
+          </e>
           <e p="Unit.cs" t="Include" />
           <e p="UnitConfig.cs" t="Include" />
           <e p="UnitFactory.cs" t="Include" />
           <e p="UnitSpawner.cs" t="Include" />
+          <e p="UnitStates" t="Include">
+            <e p="Fall.cs" t="Include" />
+            <e p="Idle.cs" t="Include" />
+          </e>
           <e p="UnitView.cs" t="Include" />
         </e>
       </e>

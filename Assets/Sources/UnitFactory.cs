@@ -20,7 +20,7 @@ public class UnitFactory
         var unit = new Unit(config.Type);
         Vector3 position = _last == null ? cell.Position.ChangeY(1).ToVector3() : _last.transform.position.ChangeY(1);
         _last = Object.Instantiate(_prefab, position, Quaternion.identity, _anchor.transform);
-        _last.Construct(unit, config);
+        //_last.Construct(unit, config);
         unit.AddWaypoint(cell.Position);
         cell.Take(unit);
         return unit;

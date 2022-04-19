@@ -1,87 +1,60 @@
-﻿using System.Collections;
-using Sources;
-using Sources.Extensions;
+﻿using Sources;
+using Sources.Components;
+using Sources.StateManagement;
+using Sources.UnitStates;
 using UnityEngine;
 
 public class UnitView : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _renderer;
+    [SerializeField] private WorldSpaceButton _button;
     [SerializeField] private AnimationCurve _speed;
-    
-    private Unit _model;
-    private int _targetWaypointIndex;
-    private bool _isFalling;
-    private bool _isCanFall;
 
-    public float FallTime;
-    public UnitView Prev;
-    public UnitView Next;
+    private Unit _model;
+    private UnitView _prev;
+    private UnitView _next;
+    private StateMachine _stateMachine;
 
     public void Construct(Unit model, UnitConfig config)
     {
         _model = model;
         _renderer.color = config.Color;
-        _model.OnPositionChanged += HandlePositionChanged;
-        FallTime = 0;
-        _targetWaypointIndex = 0;
-        StartCoroutine(WaitNext());
+        _stateMachine = new StateMachine();
+        _stateMachine.AddState(new Idle(_stateMachine, _model, _button, this, GetPrev, GetNext));
+        _stateMachine.AddState(new Fall(_stateMachine, _model, _speed, this, GetNext));
+        _stateMachine.Enter<Fall>();
     }
 
-    private void HandlePositionChanged()
+    private void Update()
     {
-        if(_isFalling == false)
-            StartCoroutine(Fall());
+        _stateMachine.Update(Time.deltaTime);
     }
 
-    private void OnMouseOver()
+    public void SetPrev(UnitView value)
     {
-        if (Input.GetMouseButton(0))
-        {
-            _model.Destroy();
-            if(Prev) Prev.Next = Next;
-            if(Next) Next.Prev = Prev;
-            Destroy(gameObject);
-        }
+        _prev = value;
     }
 
-    private IEnumerator WaitNext()
+    public void SetNext(UnitView value)
     {
-        while (Next != null && Vector3.Distance(transform.position, Next.transform.position) <= 1)
-            yield return null;
-
-        _isCanFall = true;
-        if(Next) FallTime = Next.FallTime;
+        _next = value;
     }
 
-    private IEnumerator Fall()
+    public UnitView GetPrev()
     {
-        if(_targetWaypointIndex > _model.GetLastWaypointIndex())
-        {
-            FallTime = 0;
-            _isFalling = false;
-            yield break;
-        }
+        return _prev;
+    }
 
-        _isFalling = true;
-        float time = 0;
-        Vector3 startPosition = transform.position;
-        Vector3 targetPosition = _model.GetWaypoint(_targetWaypointIndex).ToVector3();
-        while (time < 1)
-        {
-            while (_isCanFall == false)
-                yield return null;
-            
-            if(Next != null && Vector3.Distance(transform.position, Next.transform.position) <= 1)
-                FallTime = Next.FallTime;
-            
-            FallTime += Time.deltaTime;
-            time += _speed.Evaluate(FallTime) * Time.deltaTime;
-            transform.position = Vector3.Lerp(startPosition ,targetPosition, time);
-            yield return null;
-        }
-        
-        _targetWaypointIndex++;
-        
-        StartCoroutine(Fall());
+    public UnitView GetNext()
+    {
+        return _next;
+    }
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        if(_prev) Gizmos.DrawRay(transform.position, (_prev.transform.position - transform.position) / 2);
+        Gizmos.color = Color.red;
+        if(_next) Gizmos.DrawRay(transform.position, (_next.transform.position - transform.position) / 2);
     }
 }

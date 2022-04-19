@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using Sources;
 using Sources.Extensions;
+using Sources.StateManagement;
+using Sources.UnitStates;
 using UnityEngine;
 
 public class UnitSpawner
@@ -24,20 +26,22 @@ public class UnitSpawner
         Spawn();
     }
 
+    private int counter;
+    
     private void Spawn()
     {
-        var last = _view;
+        var next = _view;
         var config = _configs.Anyone();
-        var unit = new Unit(config.Type);
-        Vector3 position = _view == null ? _linkedCell.Position.ChangeY(1).ToVector3() : _view.transform.position.ChangeY(1);
+        var model = new Unit(counter);
         _view = Object.Instantiate(_prefab, _linkedCell.Position.ChangeY(1).ToVector3(), Quaternion.identity);
-        if(last != null)
-            last.Prev = _view;
-        _view.Next = last;
-        _view.Construct(unit, config);
-        unit.AddWaypoint(_linkedCell.Position);
-        unit.OnDestroy += _grid.HandleUnitDestroy;
-        _linkedCell.Take(unit);
-        _grid.Calculate(unit);
+        _view.name = counter.ToString();
+        counter++;
+        if(next) next.SetPrev(_view);
+        _view.SetNext(next);
+        _view.Construct(model, config);
+        model.AddWaypoint(_linkedCell.Position);
+        model.OnDestroy += _grid.HandleUnitDestroy;
+        _linkedCell.Take(model);
+        _grid.Calculate(model);
     }
 }

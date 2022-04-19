@@ -16,7 +16,7 @@ namespace Sources.Installers
             var cellFactory = new PlaceFactory(_cellPrefab);
             var unitFactory = new UnitFactory(_unitPrefab);
 
-            _grid = new Grid(new Vector2Int(4, 5), cellFactory, unitFactory, _unitConfigs);
+            _grid = new Grid(new Vector2Int(10, 20), cellFactory, unitFactory, _unitConfigs);
         }
 
         [ContextMenu("Recalculate")]
