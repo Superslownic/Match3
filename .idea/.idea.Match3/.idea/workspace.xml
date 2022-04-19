@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="26d3f470-4695-43ed-be0d-bde006b095a6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Unit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F2625FD8-44AA-4DD5-B6A3-882F24F14D79/a8/a06e3504/ICollection`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/51C9FC2D-1BE0-48CF-A2DD-679DEAA7D4F7/65/0d073f75/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/29A6C194-5F57-4474-95FC-AD42118554C7/04/2611c012/LinkedList`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9BAEBF9A-F865-4167-8FD1-5BFDBF5F26EB/62/e860b918/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/29A6C194-5F57-4474-95FC-AD42118554C7/b8/d867beac/LinkedListNode`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F2625FD8-44AA-4DD5-B6A3-882F24F14D79/b3/2eb72bdd/IReadOnlyCollection`1.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Sources/Test.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/UnitConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/CellView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Extensions/EnumerableExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/CellFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Place.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Cell.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Animation/ITimeline.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Animation/TimelineGroup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Animation/Timeline.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Unit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Grid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Installers/GridInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Extensions/VectorExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/UnitFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/UnitSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/UnitView.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="27kMmnVy9EzOvzQ91ibPTMoiyOu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26d3f470-4695-43ed-be0d-bde006b095a6" name="Default Changelist" comment="" />
+      <created>1649859814035</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649859814035</updated>
+      <workItem from="1649859819075" duration="7645000" />
+      <workItem from="1649914392701" duration="5487000" />
+      <workItem from="1649999860724" duration="9722000" />
+      <workItem from="1650030396987" duration="5423000" />
+      <workItem from="1650260836487" duration="25986000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="754" y="300" key="RiderGenerateDialog" timestamp="1649868033649">
+      <screen x="0" y="0" width="1974" height="1152" />
+    </state>
+    <state x="754" y="300" key="RiderGenerateDialog/0.0.1974.1152@0.0.1974.1152" timestamp="1649868033649" />
+  </component>
+</project>
