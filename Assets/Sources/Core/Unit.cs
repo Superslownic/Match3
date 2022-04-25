@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Unit
 {
-    private readonly List<Vector2Int> _waypoints;
-    
-    private int _type;
+    private readonly List<Vector2Int> _waypoints = new List<Vector2Int>();
+
+    public int Type { get; }
 
     public Unit(int type)
     {
-        _type = type;
-        _waypoints = new List<Vector2Int>();
+        Type = type;
     }
 
     public event Action OnPositionChanged;

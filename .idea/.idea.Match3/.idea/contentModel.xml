@@ -11,22 +11,49 @@
             <e p="ITimeline.cs" t="Include" />
             <e p="Timeline.cs" t="Include" />
           </e>
-          <e p="Cell.cs" t="Include" />
-          <e p="CellView.cs" t="Include" />
+          <e p="Behaviour" t="Include">
+            <e p="IUpdateListener.cs" t="Include" />
+            <e p="TickHandler.cs" t="Include" />
+          </e>
           <e p="Components" t="Include">
-            <e p="WorldSpaceButton.cs" t="Include" />
+            <e p="InputHandler.cs" t="Include" />
+          </e>
+          <e p="Core" t="Include">
+            <e p="Cell.cs" t="Include" />
+            <e p="CellView.cs" t="Include" />
+            <e p="Combination.cs" t="Include" />
+            <e p="Combinations.cs" t="Include" />
+            <e p="Grid.cs" t="Include" />
+            <e p="PlaceFactory.cs" t="Include" />
+            <e p="Unit.cs" t="Include" />
+            <e p="UnitConfig.cs" t="Include" />
+            <e p="UnitFactory.cs" t="Include" />
+            <e p="UnitSpawner.cs" t="Include" />
+            <e p="UnitStates" t="Include">
+              <e p="Fall.cs" t="Include" />
+              <e p="Idle.cs" t="Include" />
+            </e>
+            <e p="UnitView.cs" t="Include" />
+            <e p="Variation.cs" t="Include" />
           </e>
           <e p="Extensions" t="Include">
             <e p="EnumerableExtensions.cs" t="Include" />
             <e p="VectorExtensions.cs" t="Include" />
           </e>
-          <e p="Grid.cs" t="Include" />
+          <e p="Input" t="Include">
+            <e p="ITouchBeganHandler.cs" t="Include" />
+            <e p="ITouchEndedHandler.cs" t="Include" />
+            <e p="ITouchMovedHandler.cs" t="Include" />
+            <e p="PointerProvider.cs" t="Include" />
+            <e p="ScreenRaycaster.cs" t="Include" />
+            <e p="TouchProvider.cs" t="Include" />
+          </e>
           <e p="Installers" t="Include">
             <e p="GridInstaller.cs" t="Include" />
+            <e p="InputInstaller.cs" t="Include" />
             <e p="Installer.cs" t="Include" />
             <e p="SceneInstaller.cs" t="Include" />
           </e>
-          <e p="PlaceFactory.cs" t="Include" />
           <e p="Services" t="Include">
             <e p="IService.cs" t="Include" />
             <e p="ServiceLocator.cs" t="Include" />
@@ -40,15 +67,6 @@
             <e p="IState.cs" t="Include" />
             <e p="StateMachine.cs" t="Include" />
           </e>
-          <e p="Unit.cs" t="Include" />
-          <e p="UnitConfig.cs" t="Include" />
-          <e p="UnitFactory.cs" t="Include" />
-          <e p="UnitSpawner.cs" t="Include" />
-          <e p="UnitStates" t="Include">
-            <e p="Fall.cs" t="Include" />
-            <e p="Idle.cs" t="Include" />
-          </e>
-          <e p="UnitView.cs" t="Include" />
         </e>
       </e>
       <e p="Match3.sln" t="IncludeFlat" />
