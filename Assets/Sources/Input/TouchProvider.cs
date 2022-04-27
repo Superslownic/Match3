@@ -3,40 +3,34 @@ using UnityEngine;
 
 namespace Sources.Input
 {
-    public class TouchProvider : IUpdateListener
+    public class TouchProvider : ITickListener
     {
-        private readonly ScreenRaycaster _screenRaycaster;
+        private readonly Camera _camera;
 
-        public TouchProvider(ScreenRaycaster screenRaycaster) =>
-            _screenRaycaster = screenRaycaster;
+        public TouchProvider(Camera camera) =>
+            _camera = camera;
 
-        public void Update(float delta)
+        public event ClickAction OnClick;
+
+        public void Tick(float delta)
         {
             foreach (Touch touch in UnityEngine.Input.touches)
             {
-                RaycastHit2D hit = _screenRaycaster.Cast(touch.position);
-                
-                if(hit.transform == null)
-                    return;
-                
                 switch (touch.phase)
                 {
                     case TouchPhase.Began:
-                        if (hit.transform.TryGetComponent(out ITouchBeganHandler touchBeganHandler))
-                            touchBeganHandler.OnTouchBegan();
+                        OnClick?.Invoke(_camera.ScreenToWorldPoint(touch.position));
                         break;
                     
                     case TouchPhase.Moved:
-                        if (hit.transform.TryGetComponent(out ITouchMovedHandler touchMovedHandler))
-                            touchMovedHandler.OnTouchMoved(touch.deltaPosition);
                         break;
                     
                     case TouchPhase.Ended:
-                        if (hit.transform.TryGetComponent(out ITouchEndedHandler touchEndedHandler))
-                            touchEndedHandler.OnTouchEnded();
                         break;
                 }
             }
         }
     }
+
+    public delegate void ClickAction(Vector2 position);
 }

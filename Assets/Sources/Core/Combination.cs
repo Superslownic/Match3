@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Sources
+namespace Sources.Tickable
 {
     [CreateAssetMenu]
     public class Combination : ScriptableObject

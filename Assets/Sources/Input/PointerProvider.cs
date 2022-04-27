@@ -3,65 +3,23 @@ using UnityEngine;
 
 namespace Sources.Input
 {
-    public class PointerProvider : IUpdateListener
+    public class PointerProvider : ITickListener, IInputProvider
     {
-        private readonly ScreenRaycaster _screenRaycaster;
-        private readonly float _deadSqrDistance;
+        private readonly Camera _camera;
 
-        private bool _isDragging;
-        private Vector3 _lastPosition;
-
-        public PointerProvider(ScreenRaycaster screenRaycaster, float deadSqrDistance)
+        public PointerProvider(Camera camera)
         {
-            _deadSqrDistance = deadSqrDistance;
-            _screenRaycaster = screenRaycaster;
+            _camera = camera;
         }
         
-        public void Update(float delta)
+        public event ClickAction OnClick;
+        
+        public void Tick(float delta)
         {
             Vector3 mousePosition = UnityEngine.Input.mousePosition;
             
             if(UnityEngine.Input.GetMouseButtonDown(0))
-            {
-                _isDragging = true;
-                _lastPosition = mousePosition;
-                
-                RaycastHit2D hit = _screenRaycaster.Cast(mousePosition);
-                
-                if(hit.transform == null)
-                    return;
-                
-                if (hit.transform.TryGetComponent(out ITouchBeganHandler touchBeganHandler))
-                    touchBeganHandler.OnTouchBegan();
-            }
-
-            Vector3 deltaPosition = mousePosition - _lastPosition;
-            
-            if(_isDragging && deltaPosition.sqrMagnitude > _deadSqrDistance)
-            {
-                _lastPosition = mousePosition;
-                
-                RaycastHit2D hit = _screenRaycaster.Cast(mousePosition);
-                
-                if(hit.transform == null)
-                    return;
-                
-                if (hit.transform.TryGetComponent(out ITouchMovedHandler touchMovedHandler))
-                    touchMovedHandler.OnTouchMoved(deltaPosition);
-            }
-            
-            if(UnityEngine.Input.GetMouseButtonUp(0))
-            {
-                _isDragging = false;
-                
-                RaycastHit2D hit = _screenRaycaster.Cast(mousePosition);
-                
-                if(hit.transform == null)
-                    return;
-                
-                if (hit.transform.TryGetComponent(out ITouchEndedHandler touchEndedHandler))
-                    touchEndedHandler.OnTouchEnded();
-            }
+                OnClick?.Invoke(_camera.ScreenToWorldPoint(mousePosition));
         }
     }
 }

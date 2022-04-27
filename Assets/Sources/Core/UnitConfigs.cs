@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Sources.Tickable
+namespace Sources
 {
     [CreateAssetMenu]
-    public class Combinations : ScriptableObject, IEnumerable<Combination>
+    public class UnitConfigs : ScriptableObject, IEnumerable<UnitConfig>
     {
-        [SerializeField] private List<Combination> _list;
+        [SerializeField] private List<UnitConfig> _list;
 
-        IEnumerator<Combination> IEnumerable<Combination>.GetEnumerator()
+        IEnumerator<UnitConfig> IEnumerable<UnitConfig>.GetEnumerator()
         {
             return _list.GetEnumerator();
         }

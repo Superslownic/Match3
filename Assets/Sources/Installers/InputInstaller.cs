@@ -13,15 +13,13 @@ namespace Sources.Installers
 
         public override void Install(ServiceLocator serviceLocator)
         {
-            var raycaster = new ScreenRaycaster(_rayLenght, _layerMask, _camera);
-            
             #if UNITY_EDITOR
-                var inputProvider = new PointerProvider(raycaster, 0.1f);
+                IInputProvider inputProvider = new PointerProvider(_camera);
             #else
-                var inputProvider = new TouchProvider(raycaster);
+                IInputProvider inputProvider = new TouchProvider(_camera);
             #endif
             
-            TickHandler.Instance.AddListener(inputProvider);
+            //TickHandler.Instance.AddListener(inputProvider);
         }
     }
 }

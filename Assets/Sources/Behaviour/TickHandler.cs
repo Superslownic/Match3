@@ -7,24 +7,40 @@ namespace Sources.Behaviour
 {
     public class TickHandler : MonoSingleton<TickHandler>
     {
-        private readonly List<IUpdateListener> _updateListeners = new List<IUpdateListener>();
+        private readonly List<ITickListener> _tickListeners = new List<ITickListener>();
+        private readonly List<IFixedTickListener> _fixedTickListeners = new List<IFixedTickListener>();
 
-        public void AddListener(IUpdateListener listener)
+        public void AddListener(ITickListener listener)
         {
-            if(!_updateListeners.Contains(listener))
-                _updateListeners.Add(listener);
+            if(!_tickListeners.Contains(listener))
+                _tickListeners.Add(listener);
         }
         
-        public void RemoveListener(IUpdateListener listener)
+        public void AddListener(IFixedTickListener listener)
         {
-            if(_updateListeners.Contains(listener))
-                _updateListeners.Remove(listener);
+            if(!_fixedTickListeners.Contains(listener))
+                _fixedTickListeners.Add(listener);
+        }
+        
+        public void RemoveListener(ITickListener listener)
+        {
+            if(_tickListeners.Contains(listener))
+                _tickListeners.Remove(listener);
+        }
+        
+        public void RemoveListener(IFixedTickListener listener)
+        {
+            if(_fixedTickListeners.Contains(listener))
+                _fixedTickListeners.Remove(listener);
         }
 
         private void Update()
         {
-            foreach (IUpdateListener listener in _updateListeners)
-                listener.Update(Time.deltaTime);
+            foreach (ITickListener listener in _tickListeners)
+                listener.Tick(Time.deltaTime);
+            
+            foreach (IFixedTickListener listener in _fixedTickListeners)
+                listener.FixedTick(Time.fixedDeltaTime);
         }
     }
 }

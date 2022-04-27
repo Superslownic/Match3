@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Sources;
 using Sources.Extensions;
+using Sources.Tickable;
 using UnityEngine;
 
 public class Grid
@@ -72,24 +73,24 @@ public class Grid
 
     public void HandleUnitClick(Unit unit)
     {
-        Cell target = GetCell(unit.GetLastWaypoint());
-        Cell[] cells = null;
-        Combination combination =
-            _combinations.FirstOrDefault(c => c.Validate(target, this, out cells));
-
-        if(combination == null)
-            return;
-        
-        if(cells == null)
-            return;
-
-        foreach (Cell cell in cells)
-        {
-            cell.Unit.Destroy();
-            cell.Release();
-        }
-        
-        Recalculate();
+        // Cell target = GetCell(unit.GetLastWaypoint());
+        // Cell[] cells = null;
+        // Combination combination =
+        //     _combinations.FirstOrDefault(c => c.Validate(target, this, out cells));
+        //
+        // if(combination == null)
+        //     return;
+        //
+        // if(cells == null)
+        //     return;
+        //
+        // foreach (Cell cell in cells)
+        // {
+        //     cell.Unit.Destroy();
+        //     cell.Release();
+        // }
+        //
+        // Recalculate();
     }
 
     public bool InBounds(int x, int y) =>
