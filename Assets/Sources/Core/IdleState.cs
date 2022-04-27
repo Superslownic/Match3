@@ -1,8 +1,6 @@
 ﻿using Sources.StateManagement;
-using UnityEditor;
-using UnityEngine;
 
-namespace Sources.Tickable
+namespace Sources.Core
 {
     public class IdleState : State
     {

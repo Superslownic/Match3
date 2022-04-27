@@ -1,4 +1,4 @@
-﻿namespace Sources.Tickable
+﻿namespace Sources.Core
 {
     public class UnitSpawnSystem
     {

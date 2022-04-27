@@ -24,17 +24,17 @@
             <e p="CellView.cs" t="Include" />
             <e p="Combination.cs" t="Include" />
             <e p="Combinations.cs" t="Include" />
+            <e p="FallDelayState.cs" t="Include" />
+            <e p="FallState.cs" t="Include" />
             <e p="Grid.cs" t="Include" />
-            <e p="PlaceFactory.cs" t="Include" />
+            <e p="GridVisualizer.cs" t="Include" />
+            <e p="IdleState.cs" t="Include" />
             <e p="Unit.cs" t="Include" />
             <e p="UnitConfig.cs" t="Include" />
             <e p="UnitConfigs.cs" t="Include" />
             <e p="UnitFactory.cs" t="Include" />
-            <e p="UnitSpawner.cs" t="Include" />
-            <e p="UnitStates" t="Include">
-              <e p="Fall.cs" t="Include" />
-              <e p="Idle.cs" t="Include" />
-            </e>
+            <e p="UnitMatchSystem.cs" t="Include" />
+            <e p="UnitSpawnSystem.cs" t="Include" />
             <e p="UnitView.cs" t="Include" />
             <e p="Variation.cs" t="Include" />
           </e>
@@ -52,10 +52,12 @@
             <e p="TouchProvider.cs" t="Include" />
           </e>
           <e p="Installers" t="Include">
+            <e p="FactoryInstaller.cs" t="Include" />
             <e p="GridInstaller.cs" t="Include" />
             <e p="InputInstaller.cs" t="Include" />
             <e p="Installer.cs" t="Include" />
             <e p="SceneInstaller.cs" t="Include" />
+            <e p="SystemInstaller.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
             <e p="IService.cs" t="Include" />
@@ -69,22 +71,6 @@
           <e p="StateManagement" t="Include">
             <e p="IState.cs" t="Include" />
             <e p="StateMachine.cs" t="Include" />
-          </e>
-          <e p="Tickable" t="Include">
-            <e p="Cell.cs" t="Include" />
-            <e p="CellView.cs" t="Include" />
-            <e p="FallDelayState.cs" t="Include" />
-            <e p="FallState.cs" t="Include" />
-            <e p="Grid.cs" t="Include" />
-            <e p="GridVisualizer.cs" t="Include" />
-            <e p="IdleState.cs" t="Include" />
-            <e p="ISystem.cs" t="Include" />
-            <e p="TickableInstaller.cs" t="Include" />
-            <e p="Unit.cs" t="Include" />
-            <e p="UnitFactory.cs" t="Include" />
-            <e p="UnitMatchSystem.cs" t="Include" />
-            <e p="UnitSpawnSystem.cs" t="Include" />
-            <e p="UnitView.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

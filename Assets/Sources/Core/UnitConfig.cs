@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Sources
+namespace Sources.Core
 {
     [CreateAssetMenu]
     public class UnitConfig : ScriptableObject

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Sources
+namespace Sources.Core
 {
     [CreateAssetMenu]
     public class UnitConfigs : ScriptableObject, IEnumerable<UnitConfig>

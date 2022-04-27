@@ -1,7 +1,7 @@
 ﻿using Sources.Extensions;
 using UnityEngine;
 
-namespace Sources.Tickable
+namespace Sources.Core
 {
     public class GridVisualizer : MonoBehaviour
     {

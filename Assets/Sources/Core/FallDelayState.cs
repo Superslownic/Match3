@@ -2,7 +2,7 @@
 using Sources.StateManagement;
 using UnityEngine;
 
-namespace Sources.Tickable
+namespace Sources.Core
 {
     public class FallDelayState : State
     {

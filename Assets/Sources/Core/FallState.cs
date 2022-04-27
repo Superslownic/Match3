@@ -1,10 +1,8 @@
 ﻿using Sources.Extensions;
 using Sources.StateManagement;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-namespace Sources.Tickable
+namespace Sources.Core
 {
     public class FallState : State
     {

@@ -1,18 +1,28 @@
-﻿using Sources.Extensions;
+﻿using TMPro;
 using UnityEngine;
 
-public class CellView : MonoBehaviour
+namespace Sources.Core
 {
-    private Cell _model;
-
-    public void Construct(Cell model)
+    public class CellView : MonoBehaviour
     {
-        _model = model;
-        UpdatePosition();
-    }
+        [SerializeField] private TextMeshPro _text;
 
-    private void UpdatePosition()
-    {
-        transform.position = _model.Position.ToVector3();
+        private Cell _cell;
+
+        public void Construct(Cell cell)
+        {
+            _cell = cell;
+        }
+
+        private void Update()
+        {
+            if(_cell.Unit == null)
+            {
+                _text.text = "n";
+                return;
+            }
+
+            _text.text = _cell.Unit.ID.ToString();
+        }
     }
 }

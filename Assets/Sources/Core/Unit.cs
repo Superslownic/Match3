@@ -1,44 +1,63 @@
-using System;
-using System.Collections.Generic;
+﻿using System;
+using Sources.Extensions;
 using UnityEngine;
 
-public class Unit
+namespace Sources.Core
 {
-    private readonly List<Vector2Int> _waypoints = new List<Vector2Int>();
-
-    public int Type { get; }
-
-    public Unit(int type)
+    public class Unit
     {
-        Type = type;
-    }
+        private readonly Grid _grid;
+        
+        public Vector2Int GridPosition;
+        public int Type;
+        public int ID;
 
-    public event Action OnPositionChanged;
-    public event Action<Unit> OnDestroy;
+        private bool _destroyed;
 
-    public void AddWaypoint(Vector2Int position)
-    {
-        _waypoints.Add(position);
-        OnPositionChanged?.Invoke();
-    }
+        public Unit(Grid grid, int type, Vector2Int position)
+        {
+            _grid = grid;
+            Type = type;
+            GridPosition = position;
+        }
 
-    public int GetLastWaypointIndex()
-    {
-        return _waypoints.Count - 1;
-    }
+        public event Action OnDestroy;
 
-    public Vector2Int GetWaypoint(int index)
-    {
-        return _waypoints[index];
-    }
+        public Vector2Int NextGridPosition =>
+            GridPosition.ChangeY(-1);
 
-    public Vector2Int GetLastWaypoint()
-    {
-        return _waypoints[GetLastWaypointIndex()];
-    }
+        public bool CanFall =>
+            _grid.InBounds(NextGridPosition) && _grid.GetCell(NextGridPosition).IsFree;
 
-    public void Destroy()
-    {
-        OnDestroy?.Invoke(this);
+        public void Destroy()
+        {
+            OnDestroy?.Invoke();
+            ReleaseCell(GridPosition);
+            _destroyed = true;
+        }
+
+        public void TakeNextCell()
+        {
+            Vector2Int previousPosition = GridPosition;
+            GridPosition = NextGridPosition;
+            TakeCell(GridPosition);
+            ReleaseCell(previousPosition);
+        }
+
+        private void TakeCell(Vector2Int position)
+        {
+            if(_destroyed)
+            {
+                Debug.Log("Destroyed take cell");
+                return;
+            }
+            
+            _grid.GetCell(position).Take(this);
+        }
+        
+        private void ReleaseCell(Vector2Int position)
+        {
+            _grid.GetCell(position).Release();
+        }
     }
 }

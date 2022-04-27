@@ -3,7 +3,7 @@ using Sources.Extensions;
 using Sources.Input;
 using UnityEngine;
 
-namespace Sources.Tickable
+namespace Sources.Core
 {
     public class UnitMatchSystem
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Sources.Tickable
+namespace Sources.Core
 {
     [CreateAssetMenu]
     public class Combinations : ScriptableObject, IEnumerable<Combination>

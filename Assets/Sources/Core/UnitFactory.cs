@@ -1,28 +1,39 @@
-﻿using Sources;
-using Sources.Extensions;
+﻿using Sources.Extensions;
 using UnityEngine;
 
-public class UnitFactory
+namespace Sources.Core
 {
-    private readonly UnitView _prefab;
-    private readonly GameObject _anchor;
-
-    private UnitView _last;
-
-    public UnitFactory(UnitView prefab)
+    public class UnitFactory
     {
-        _prefab = prefab;
-        _anchor = new GameObject("Units");
-    }
-    
-    public Unit Create(UnitConfig config, Cell cell)
-    {
-        var unit = new Unit(config.Type);
-        Vector3 position = _last == null ? cell.Position.ChangeY(1).ToVector3() : _last.transform.position.ChangeY(1);
-        _last = Object.Instantiate(_prefab, position, Quaternion.identity, _anchor.transform);
-        //_last.Construct(unit, config);
-        unit.AddWaypoint(cell.Position);
-        cell.Take(unit);
-        return unit;
+        private readonly UnitView _prefab;
+        private readonly UnitConfigs _configs;
+        private readonly Grid _grid;
+
+        private int _counter;
+
+        public UnitFactory(UnitConfigs configs, UnitView prefab, Grid grid)
+        {
+            _configs = configs;
+            _prefab = prefab;
+            _grid = grid;
+            _counter = 0;
+        }
+
+        public void Create(Cell cell)
+        {
+            var config = _configs.Anyone();
+            Create(cell, config);
+        }
+
+        public void Create(Cell cell, UnitConfig config)
+        {
+            var model = new Unit(_grid, config.Type, cell.Position);
+            model.ID = _counter;
+            var view = Object.Instantiate(_prefab, cell.Position.ToVector3(), Quaternion.identity);
+            view.Construct(model, config);
+            view.name = _counter.ToString();
+            cell.Take(model);
+            _counter++;
+        }
     }
 }

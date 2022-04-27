@@ -1,107 +1,55 @@
-﻿using System.Linq;
-using Sources;
-using Sources.Extensions;
-using Sources.Tickable;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Grid
+namespace Sources.Core
 {
-    private readonly Vector2Int _size;
-    private readonly Cell[,] _cells;
-    private readonly Combinations _combinations;
-
-    private int Width =>
-        _cells.GetLength(0);
+    public class Grid
+    {
+        private readonly Cell[,] _cells;
+        
+        public Grid(Vector2Int size)
+        {
+            _cells = new Cell[size.x, size.y];
+            
+            for (int x = 0; x < size.x; x++)
+                for (int y = 0; y < size.y; y++)
+                    _cells[x, y] = new Cell(new Vector2Int(x, y));
+        }
+        
+        public int Width =>
+            _cells.GetLength(0);
     
-    private int Height =>
-        _cells.GetLength(1);
-
-    public Grid(Vector2Int size, UnitConfig[] unitConfigs, Combinations combinations)
-    {
-        _combinations = combinations;
-        _size = size;
-        _cells = new Cell[size.x, size.y];
+        public int Height =>
+            _cells.GetLength(1);
         
-        for (int x = 0; x < size.x; x++)
+        public bool InBounds(int x, int y) =>
+            x >= 0 && x < Width && y >= 0 && y < Height;
+
+        public bool InBounds(Vector2Int position) =>
+            InBounds(position.x, position.y);
+
+        public Cell GetCell(Vector2Int position) =>
+            GetCell(position.x, position.y);
+
+        public Cell GetCell(int x, int y) =>
+            !InBounds(x, y) ? null : _cells[x, y];
+
+        public Cell GetNextTaken(Vector2Int position) =>
+            GetNextTaken(position.x, position.y);
+
+        public Cell GetNextTaken(int x, int y)
         {
-            for (int y = 0; y < size.y; y++)
+            while (y > 0)
             {
-                _cells[x, y] = new Cell(new Vector2Int(x, y));
-                if (y == size.y - 1)
-                    new UnitSpawner(this, _cells[x, y], unitConfigs);
+                y -= 1;
+
+                if (!InBounds(x, y))
+                    return null;
+                
+                if (GetCell(x, y).IsTaken)
+                    return GetCell(x, y);
             }
+
+            return null;
         }
     }
-
-    public void Calculate(Unit unit)
-    {
-        if(unit == null)
-            return;
-        
-        Vector2Int position = unit.GetLastWaypoint();
-        Cell prevCell = GetCell(position);
-        Cell targetCell = prevCell;
-        
-        while (targetCell.Position.y > 0)
-        {
-            Cell nextCell = GetCell(targetCell.Position.ChangeY(-1));
-            
-            if(nextCell.IsFree == false)
-                break;
-            
-            targetCell = nextCell;
-            unit.AddWaypoint(nextCell.Position);
-        }
-
-        if (prevCell != targetCell)
-        {
-            targetCell.Take(unit);
-            prevCell.Release();
-        }
-    }
-
-    public void Recalculate()
-    {
-        for (int x = 0; x < _size.x; x++)
-        {
-            for (int y = 0; y < _size.y; y++)
-            {
-                Calculate(GetCell(x, y).Unit);
-            }
-        }
-    }
-
-    public void HandleUnitClick(Unit unit)
-    {
-        // Cell target = GetCell(unit.GetLastWaypoint());
-        // Cell[] cells = null;
-        // Combination combination =
-        //     _combinations.FirstOrDefault(c => c.Validate(target, this, out cells));
-        //
-        // if(combination == null)
-        //     return;
-        //
-        // if(cells == null)
-        //     return;
-        //
-        // foreach (Cell cell in cells)
-        // {
-        //     cell.Unit.Destroy();
-        //     cell.Release();
-        // }
-        //
-        // Recalculate();
-    }
-
-    public bool InBounds(int x, int y) =>
-        x >= 0 && x < Width && y >= 0 && y < Height;
-
-    public bool InBounds(Vector2Int position) =>
-        InBounds(position.x, position.y);
-
-    public Cell GetCell(Vector2Int position) =>
-        GetCell(position.x, position.y);
-
-    public Cell GetCell(int x, int y) =>
-        !InBounds(x, y) ? null : _cells[x, y];
 }

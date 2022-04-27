@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Sources.Tickable
+namespace Sources.Core
 {
     [Serializable]
     public class Variation

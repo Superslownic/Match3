@@ -1,29 +1,42 @@
 ﻿using System;
 using UnityEngine;
 
-public class Cell
+namespace Sources.Core
 {
-    public Vector2Int Position { get; }
-    public Unit Unit { get; private set; }
-    
-    public bool IsFree =>
-        Unit == null;
-
-    public event Action OnReleased;
-
-    public Cell(Vector2Int position)
+    public class Cell
     {
-        Position = position;
-    }
+        private readonly Vector2Int _position;
+        
+        private Unit _unit;
 
-    public void Take(Unit unit)
-    {
-        Unit = unit;
-    }
+        public Cell(Vector2Int position)
+        {
+            _position = position;
+        }
 
-    public void Release()
-    {
-        Unit = null;
-        OnReleased?.Invoke();
+        public event Action<Cell> OnRelease;
+
+        public Vector2Int Position =>
+            _position;
+        
+        public Unit Unit =>
+            _unit;
+
+        public bool IsFree =>
+            _unit == null;
+
+        public bool IsTaken =>
+            !IsFree;
+
+        public void Take(Unit unit)
+        {
+            _unit = unit;
+        }
+
+        public void Release()
+        {
+            _unit = null;
+            OnRelease?.Invoke(this);
+        }
     }
 }

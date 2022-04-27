@@ -1,79 +1,50 @@
-﻿using System;
-using Sources;
-using Sources.Components;
+﻿using Sources.Components;
+using Sources.Extensions;
 using Sources.StateManagement;
-using Sources.UnitStates;
 using UnityEngine;
 
-public class UnitView : MonoBehaviour
+namespace Sources.Core
 {
-    [SerializeField] private SpriteRenderer _renderer;
-    [SerializeField] private InputHandler _button;
-    [SerializeField] private AnimationCurve _speed;
-
-    private Unit _model;
-    private UnitView _prev;
-    private UnitView _next;
-    private StateMachine _stateMachine;
-
-    public void Construct(Unit model, UnitConfig config)
+    public class UnitView : MonoBehaviour
     {
-        _model = model;
-        _renderer.color = config.Color;
-        _stateMachine = new StateMachine();
-        _stateMachine.AddState(new Idle(_stateMachine, _model, _button, this, GetPrev, GetNext));
-        _stateMachine.AddState(new Fall(_stateMachine, _model, _speed, this, GetNext));
-        _stateMachine.Enter<Fall>();
-        _model.OnDestroy += HandleDestroy;
-    }
+        [SerializeField] private SpriteRenderer _renderer;
+        [SerializeField] private InputHandler _button;
+        [SerializeField] private float _speed;
 
-    private void Update()
-    {
-        _stateMachine.Update(Time.deltaTime);
-    }
+        private Unit _unit;
+        private StateMachine _stateMachine;
 
-    public void SetPrev(UnitView value)
-    {
-        _prev = value;
-    }
+        public void Construct(Unit unit, UnitConfig config)
+        {
+            _unit = unit;
+            _unit.OnDestroy += HandleDestroy;
+            _renderer.color = config.Color;
+            _stateMachine = new StateMachine();
+            _stateMachine.AddState(new IdleState(_stateMachine, this, _unit));
+            _stateMachine.AddState(new FallDelayState(_stateMachine, this, _unit));
+            _stateMachine.AddState(new FallState(_stateMachine, this, _unit, _speed));
+            _stateMachine.Enter<IdleState>();
+        }
 
-    public void SetNext(UnitView value)
-    {
-        _next = value;
-    }
+        private void HandleDestroy()
+        {
+            Destroy(gameObject);
+        }
 
-    public UnitView GetPrev()
-    {
-        return _prev;
-    }
+        private void Update()
+        {
+            _stateMachine.Update(Time.deltaTime);
+        }
 
-    public UnitView GetNext()
-    {
-        return _next;
-    }
-
-    public void AddClickListener(ClickAction action)
-    {
-        _button.OnClick += action;
-    }
-    
-    public void AddDragListener(DragAction action)
-    {
-        _button.OnDrag += action;
-    }
-
-    private void HandleDestroy(Unit obj)
-    {
-        if(_prev) _prev.SetNext(_next);
-        if(_next) _next.SetPrev(_prev);
-        Destroy(gameObject);
-    }
-
-    public void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        if(_prev) Gizmos.DrawRay(transform.position, (_prev.transform.position - transform.position) / 2);
-        Gizmos.color = Color.red;
-        if(_next) Gizmos.DrawRay(transform.position, (_next.transform.position - transform.position) / 2);
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = _stateMachine.CurrentState switch
+            {
+                IdleState _ => Color.red,
+                FallDelayState _ => Color.yellow,
+                FallState _ => Color.green,
+            };
+            Gizmos.DrawWireCube(_unit.GridPosition.ToVector3(), Vector3.one);
+        }
     }
 }
