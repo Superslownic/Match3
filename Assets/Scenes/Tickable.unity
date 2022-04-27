@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 725402355}
   - component: {fileID: 725402354}
   - component: {fileID: 725402356}
+  - component: {fileID: 725402357}
   m_Layer: 0
   m_Name: SceneInstaller
   m_TagString: Untagged
@@ -264,11 +265,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ee61586c58441e8a0f0a6b143cc455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
   _configs: {fileID: 11400000, guid: fa5737bed3074a445a9aaee69d3f6727, type: 2}
   _combinations: {fileID: 11400000, guid: ea1655a4c8529cb47a0ea70350e66f26, type: 2}
   _prefab: {fileID: 4236691366666675354, guid: 2b0982a8953214c47a500a2cf6d5c66f, type: 3}
   _camera: {fileID: 519420031}
+  _gridVisualizer: {fileID: 725402357}
+  _cellView: {fileID: 8230159095045224428, guid: a92a52f2314495b4193f721948b50bef, type: 3}
+--- !u!114 &725402357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725402353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db5f5c8093942ca8e2d594108567a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &916954805
 GameObject:
   m_ObjectHideFlags: 0

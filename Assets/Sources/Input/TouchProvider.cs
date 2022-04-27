@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Sources.Input
 {
-    public class TouchProvider : ITickListener
+    public class TouchProvider : ITickListener, IInputProvider
     {
         private readonly Camera _camera;
 

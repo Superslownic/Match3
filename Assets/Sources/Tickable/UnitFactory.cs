@@ -1,4 +1,5 @@
-﻿using Sources.Extensions;
+﻿using Sources.Behaviour;
+using Sources.Extensions;
 using UnityEngine;
 
 namespace Sources.Tickable
@@ -7,11 +8,16 @@ namespace Sources.Tickable
     {
         private readonly UnitView _prefab;
         private readonly UnitConfigs _configs;
-        
-        public UnitFactory(UnitConfigs configs, UnitView prefab)
+        private readonly Grid _grid;
+
+        private int _counter;
+
+        public UnitFactory(UnitConfigs configs, UnitView prefab, Grid grid)
         {
             _configs = configs;
             _prefab = prefab;
+            _grid = grid;
+            _counter = 0;
         }
 
         public void Create(Cell cell)
@@ -22,17 +28,13 @@ namespace Sources.Tickable
 
         public void Create(Cell cell, UnitConfig config)
         {
-            var model = new Unit
-            {
-                Type = config.Type,
-                GridPosition = cell.Position,
-                Position = cell.Position,
-                PreviousPosition = cell.Position,
-                MoveDelta = 2
-            };
+            var model = new Unit(_grid, config.Type, cell.Position);
+            model.ID = _counter;
             var view = Object.Instantiate(_prefab, cell.Position.ToVector3(), Quaternion.identity);
             view.Construct(model, config);
+            view.name = _counter.ToString();
             cell.Take(model);
+            _counter++;
         }
     }
 }

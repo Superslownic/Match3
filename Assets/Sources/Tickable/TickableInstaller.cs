@@ -8,23 +8,22 @@ namespace Sources.Tickable
 {
     public class TickableInstaller : Installer
     {
-        [SerializeField] private float _speed;
         [SerializeField] private UnitConfigs _configs;
         [SerializeField] private Combinations _combinations;
         [SerializeField] private UnitView _prefab;
         [SerializeField] private Camera _camera;
+        [SerializeField] private GridVisualizer _gridVisualizer;
         
         public override void Install(ServiceLocator serviceLocator)
         {
             var inputProvider = new PointerProvider(_camera);
+            //var inputProvider = new TouchProvider(_camera);
             TickHandler.Instance.AddListener(inputProvider);
             
             var grid = new Grid(new Vector2Int(8, 9));
+            _gridVisualizer.Construct(grid);
             
-            var unitFactory = new UnitFactory(_configs, _prefab);
-            
-            var unitFallSystem = new UnitFallSystem(grid, _speed);
-            TickHandler.Instance.AddListener(unitFallSystem);
+            var unitFactory = new UnitFactory(_configs, _prefab, grid);
             
             var unitSpawnSystem = new UnitSpawnSystem(unitFactory);
 

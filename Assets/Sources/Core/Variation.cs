@@ -18,6 +18,9 @@ namespace Sources.Tickable
                 if (cell == null)
                     return false;
 
+                if (cell.Unit == null)
+                    return false;
+
                 if (target.Unit.Type != cell.Unit.Type)
                     return false;
             }

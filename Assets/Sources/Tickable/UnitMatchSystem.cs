@@ -26,9 +26,6 @@ namespace Sources.Tickable
             if(target.IsFree)
                 return;
             
-            if(target.Unit.IsMoving)
-                return;
-            
             Cell[] cells = null;
             Combination combination =
                 _combinations.FirstOrDefault(c => c.Validate(target, _grid, out cells));
@@ -40,10 +37,7 @@ namespace Sources.Tickable
                 return;
 
             foreach (Cell cell in cells)
-            {
                 cell.Unit.Destroy();
-                cell.Release();
-            }
         }
     }
 }

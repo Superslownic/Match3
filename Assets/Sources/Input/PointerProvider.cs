@@ -18,7 +18,7 @@ namespace Sources.Input
         {
             Vector3 mousePosition = UnityEngine.Input.mousePosition;
             
-            if(UnityEngine.Input.GetMouseButtonDown(0))
+            if(UnityEngine.Input.GetMouseButton(0))
                 OnClick?.Invoke(_camera.ScreenToWorldPoint(mousePosition));
         }
     }
