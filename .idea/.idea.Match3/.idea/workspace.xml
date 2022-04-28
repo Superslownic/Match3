@@ -39,6 +39,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitSpawnSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitSpawnSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitSpawnSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/UnitView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/Variation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Variation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Extensions/VectorExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Extensions/VectorExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/IInputProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Input/IInputProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/PointerProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Input/PointerProvider.cs" afterDir="false" />
@@ -106,7 +107,6 @@
         <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitSwapSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitMatchSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitDestroySystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitMatchSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/CellView.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitView.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/Unit.cs" />
@@ -114,17 +114,18 @@
         <option value="$PROJECT_DIR$/Assets/Sources/Installers/VisualizationInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/GlobalEvents/EventDefinitions.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Installers/SystemInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/Visualization/GridVisualization.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/Visualization/FallVisualization.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Input/PointerProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Core/Variation.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitSwapSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitDestroySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/Visualization/SwapVisualization.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/Visualization/UnitDestroyVisualization.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Installers/InputInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitFallSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Installers/SystemInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Variation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitMatchSystem.cs" />
       </list>
     </option>
   </component>
@@ -184,7 +185,7 @@
       <workItem from="1650865173533" duration="15233000" />
       <workItem from="1650949539420" duration="23661000" />
       <workItem from="1651038880254" duration="26476000" />
-      <workItem from="1651124131233" duration="19537000" />
+      <workItem from="1651124131233" duration="20362000" />
     </task>
     <servers />
   </component>
