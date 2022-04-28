@@ -9,7 +9,7 @@ namespace Sources.Installers
         
         public override void Install(ServiceLocator serviceLocator)
         {
-            var grid = new Core.Grid(new Vector2Int(8, 9));
+            var grid = new Core.Grid(_size);
             serviceLocator.Register<Core.Grid>().FromInstance(grid);
         }
     }

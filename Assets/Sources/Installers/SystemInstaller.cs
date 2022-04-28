@@ -1,4 +1,5 @@
-﻿using Sources.Core;
+﻿using Sources.Behaviour;
+using Sources.Core;
 using Sources.Input;
 using Sources.Services;
 using UnityEngine;
@@ -13,7 +14,18 @@ namespace Sources.Installers
         {
             var grid = serviceLocator.Resolve<Core.Grid>();
             var inputProvider = serviceLocator.Resolve<IInputProvider>();
-            var unitSpawnSystem = new UnitSpawnSystem(serviceLocator.Resolve<UnitFactory>());
+            var unitFactory = serviceLocator.Resolve<UnitFactory>();
+            
+            var unitMatchSystem = new UnitMatchSystem(_combinations, grid);
+
+            var unitDestroySystem = new UnitDestroySystem(grid);
+            
+            var unitFallSystem = new UnitFallSystem(grid, unitMatchSystem);
+            TickHandler.Instance.AddListener(unitFallSystem);
+            
+            var unitSwapSystem = new UnitSwapSystem(grid, unitMatchSystem, inputProvider);
+            
+            var unitSpawnSystem = new UnitSpawnSystem(unitFactory);
 
             for (int i = 0; i < 8; i++)
             {
@@ -21,8 +33,6 @@ namespace Sources.Installers
                 cell.OnRelease += unitSpawnSystem.HandleCellOnRelease;
                 unitSpawnSystem.HandleCellOnRelease(cell);
             }
-            
-            var unitMatchSystem = new UnitMatchSystem(_combinations, grid, inputProvider);
         }
     }
 }

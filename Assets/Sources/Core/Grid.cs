@@ -32,24 +32,5 @@ namespace Sources.Core
 
         public Cell GetCell(int x, int y) =>
             !InBounds(x, y) ? null : _cells[x, y];
-
-        public Cell GetNextTaken(Vector2Int position) =>
-            GetNextTaken(position.x, position.y);
-
-        public Cell GetNextTaken(int x, int y)
-        {
-            while (y > 0)
-            {
-                y -= 1;
-
-                if (!InBounds(x, y))
-                    return null;
-                
-                if (GetCell(x, y).IsTaken)
-                    return GetCell(x, y);
-            }
-
-            return null;
-        }
     }
 }

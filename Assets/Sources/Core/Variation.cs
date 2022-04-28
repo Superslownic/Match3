@@ -20,6 +20,9 @@ namespace Sources.Core
 
                 if (cell.Unit == null)
                     return false;
+                
+                if (target.Unit.IsBlocked || cell.Unit.IsBlocked)
+                    return false;
 
                 if (target.Unit.Type != cell.Unit.Type)
                     return false;

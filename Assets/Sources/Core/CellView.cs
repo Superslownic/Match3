@@ -22,7 +22,7 @@ namespace Sources.Core
                 return;
             }
 
-            _text.text = _cell.Unit.ID.ToString();
+            //_text.text = _cell.Unit.ID.ToString();
         }
     }
 }

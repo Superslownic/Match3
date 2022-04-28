@@ -10,6 +10,9 @@ namespace Sources.Extensions
         public static Vector2Int ToVector2Int(this Vector2 vector) =>
             new Vector2Int(Mathf.RoundToInt(vector.x), Mathf.RoundToInt(vector.y));
         
+        public static Vector2Int ToVector2Int(this Vector3 vector) =>
+            new Vector2Int(Mathf.RoundToInt(vector.x), Mathf.RoundToInt(vector.y));
+        
         public static Vector3 ToVector3(this Vector2 vector) =>
             new Vector3(vector.x, vector.y, 0);
         

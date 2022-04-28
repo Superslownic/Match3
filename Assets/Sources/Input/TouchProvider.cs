@@ -1,4 +1,5 @@
 ﻿using Sources.Behaviour;
+using Sources.Extensions;
 using UnityEngine;
 
 namespace Sources.Input
@@ -11,6 +12,7 @@ namespace Sources.Input
             _camera = camera;
 
         public event ClickAction OnClick;
+        public event SwipeAction OnSwipe;
 
         public void Tick(float delta)
         {
@@ -19,7 +21,7 @@ namespace Sources.Input
                 switch (touch.phase)
                 {
                     case TouchPhase.Began:
-                        OnClick?.Invoke(_camera.ScreenToWorldPoint(touch.position));
+                        OnClick?.Invoke(_camera.ScreenToWorldPoint(touch.position).ToVector2Int());
                         break;
                     
                     case TouchPhase.Moved:
@@ -31,6 +33,4 @@ namespace Sources.Input
             }
         }
     }
-
-    public delegate void ClickAction(Vector2 position);
 }

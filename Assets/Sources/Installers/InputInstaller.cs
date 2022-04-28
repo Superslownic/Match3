@@ -11,11 +11,13 @@ namespace Sources.Installers
 
         public override void Install(ServiceLocator serviceLocator)
         {
-            #if UNITY_EDITOR
-                var inputProvider = new PointerProvider(_camera);
-            #else
-                var inputProvider = new TouchProvider(_camera);
-            #endif
+            // #if UNITY_EDITOR
+            //     var inputProvider = new PointerProvider(_camera);
+            // #else
+            //     var inputProvider = new TouchProvider(_camera);
+            // #endif
+            
+            var inputProvider = new PointerProvider(_camera);
             
             TickHandler.Instance.AddListener(inputProvider);
             

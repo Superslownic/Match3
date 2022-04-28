@@ -1,7 +1,5 @@
 ﻿using System.Linq;
-using Sources.Extensions;
-using Sources.Input;
-using UnityEngine;
+using Sources.GlobalEvents;
 
 namespace Sources.Core
 {
@@ -9,22 +7,16 @@ namespace Sources.Core
     {
         private readonly Combinations _combinations;
         private readonly Grid _grid;
-        private readonly IInputProvider _inputProvider;
 
-        public UnitMatchSystem(Combinations combinations, Grid grid, IInputProvider inputProvider)
+        public UnitMatchSystem(Combinations combinations, Grid grid)
         {
             _grid = grid;
-            _inputProvider = inputProvider;
             _combinations = combinations;
-            _inputProvider.OnClick += HandleClick;
         }
 
-        private void HandleClick(Vector2 position)
+        public void Match(Unit unit)
         {
-            Cell target = _grid.GetCell(position.ToVector2Int());
-            
-            if(target.IsFree)
-                return;
+            Cell target = _grid.GetCell(unit.Position);
             
             Cell[] cells = null;
             Combination combination =
@@ -37,7 +29,10 @@ namespace Sources.Core
                 return;
 
             foreach (Cell cell in cells)
-                cell.Unit.Destroy();
+            {
+                cell.Unit.IsBlocked = true;
+                EventManager.GetEvent<OnUnitReadyToDestroy>().Invoke(cell.Unit);
+            }
         }
     }
 }

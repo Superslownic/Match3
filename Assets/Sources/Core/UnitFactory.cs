@@ -1,22 +1,15 @@
 ﻿using Sources.Extensions;
-using UnityEngine;
+using Sources.GlobalEvents;
 
 namespace Sources.Core
 {
     public class UnitFactory
     {
-        private readonly UnitView _prefab;
         private readonly UnitConfigs _configs;
-        private readonly Grid _grid;
 
-        private int _counter;
-
-        public UnitFactory(UnitConfigs configs, UnitView prefab, Grid grid)
+        public UnitFactory(UnitConfigs configs)
         {
             _configs = configs;
-            _prefab = prefab;
-            _grid = grid;
-            _counter = 0;
         }
 
         public void Create(Cell cell)
@@ -27,13 +20,9 @@ namespace Sources.Core
 
         public void Create(Cell cell, UnitConfig config)
         {
-            var model = new Unit(_grid, config.Type, cell.Position);
-            model.ID = _counter;
-            var view = Object.Instantiate(_prefab, cell.Position.ToVector3(), Quaternion.identity);
-            view.Construct(model, config);
-            view.name = _counter.ToString();
-            cell.Take(model);
-            _counter++;
+            var unit = new Unit(config.Type, cell.Position);
+            cell.Take(unit);
+            EventManager.GetEvent<OnUnitCreated>().Invoke(unit);
         }
     }
 }

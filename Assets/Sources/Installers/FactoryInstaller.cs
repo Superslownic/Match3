@@ -7,11 +7,10 @@ namespace Sources.Installers
     public class FactoryInstaller : Installer
     {
         [SerializeField] private UnitConfigs _configs;
-        [SerializeField] private UnitView _prefab;
         
         public override void Install(ServiceLocator serviceLocator)
         {
-            var unitFactory = new UnitFactory(_configs, _prefab, serviceLocator.Resolve<Core.Grid>());
+            var unitFactory = new UnitFactory(_configs);
             serviceLocator.Register(unitFactory);
         }
     }

@@ -24,23 +24,38 @@
             <e p="CellView.cs" t="Include" />
             <e p="Combination.cs" t="Include" />
             <e p="Combinations.cs" t="Include" />
-            <e p="FallDelayState.cs" t="Include" />
-            <e p="FallState.cs" t="Include" />
             <e p="Grid.cs" t="Include" />
             <e p="GridVisualizer.cs" t="Include" />
-            <e p="IdleState.cs" t="Include" />
+            <e p="Systems" t="Include">
+              <e p="UnitDestroySystem.cs" t="Include" />
+              <e p="UnitFallSystem.cs" t="Include" />
+              <e p="UnitMatchSystem.cs" t="Include" />
+              <e p="UnitSpawnSystem.cs" t="Include" />
+              <e p="UnitSwapSystem.cs" t="Include" />
+            </e>
             <e p="Unit.cs" t="Include" />
             <e p="UnitConfig.cs" t="Include" />
             <e p="UnitConfigs.cs" t="Include" />
             <e p="UnitFactory.cs" t="Include" />
-            <e p="UnitMatchSystem.cs" t="Include" />
-            <e p="UnitSpawnSystem.cs" t="Include" />
             <e p="UnitView.cs" t="Include" />
             <e p="Variation.cs" t="Include" />
+            <e p="Visualization" t="Include">
+              <e p="FallVisualization.cs" t="Include" />
+              <e p="GridVisualization.cs" t="Include" />
+              <e p="SwapVisualization.cs" t="Include" />
+              <e p="UnitDestroyVisualization.cs" t="Include" />
+            </e>
           </e>
           <e p="Extensions" t="Include">
             <e p="EnumerableExtensions.cs" t="Include" />
             <e p="VectorExtensions.cs" t="Include" />
+          </e>
+          <e p="GlobalEvents" t="Include">
+            <e p="Event.cs" t="Include" />
+            <e p="EventBase.cs" t="Include" />
+            <e p="EventDefinitions.cs" t="Include" />
+            <e p="EventManager.cs" t="Include" />
+            <e p="IGlobalEvent.cs" t="Include" />
           </e>
           <e p="Input" t="Include">
             <e p="IInputProvider.cs" t="Include" />
@@ -58,6 +73,7 @@
             <e p="Installer.cs" t="Include" />
             <e p="SceneInstaller.cs" t="Include" />
             <e p="SystemInstaller.cs" t="Include" />
+            <e p="VisualizationInstaller.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
             <e p="IService.cs" t="Include" />

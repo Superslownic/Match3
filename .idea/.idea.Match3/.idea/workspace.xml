@@ -22,64 +22,32 @@
     <list default="true" id="26d3f470-4695-43ed-be0d-bde006b095a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Match3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Match3/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Match3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Match3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/Cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Cell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/Cell.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Cell.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Combinations/Combinations.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Combinations/Combinations.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tickable.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tickable.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/CellView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/CellView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/CellView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/CellView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/Combination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Combination.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/Combinations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Combinations.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/FallDelayState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/FallDelayState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/FallState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/FallState.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/Grid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Grid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/Grid.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Grid.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/PlaceFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/PlaceFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/IdleState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/IdleState.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Unit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/Unit.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Unit.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/UnitConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitConfigs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/UnitConfigs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/UnitFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/UnitFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitSpawner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitSpawner.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitStates.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitStates/Fall.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitStates/Fall.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitStates/Idle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitStates/Idle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitMatchSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitMatchSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitMatchSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitMatchSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitSpawnSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitSpawnSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitSpawnSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/UnitView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/UnitView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/UnitView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Core/Variation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/Variation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Extensions/VectorExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Extensions/VectorExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/IInputProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Input/IInputProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/PointerProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Input/PointerProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/TouchProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Input/TouchProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Installers/FactoryInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Installers/FactoryInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Installers/GridInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Installers/GridInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Installers/InputInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Installers/InputInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Services/ServiceLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Services/ServiceLocator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/Cell.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/Cell.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/CellView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/CellView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/FallDelayState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/FallDelayState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/FallDelayState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/FallDelayState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/FallState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/FallState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/FallState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/FallState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/Grid.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/Grid.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/GridVisualizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/GridVisualizer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/GridVisualizer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/GridVisualizer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/ISystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/ISystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/IdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/IdleState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/IdleState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/TickableInstaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/TickableInstaller.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/Unit.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/Unit.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/UnitFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/UnitFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/UnitMatchSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/UnitMatchSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/UnitMatchSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/UnitMatchSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/UnitSpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/UnitSpawnSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/UnitSpawnSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Core/UnitSpawnSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/UnitView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Tickable/UnitView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Installers/SystemInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Installers/SystemInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,52 +59,21 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6AF207EC-D210-4462-8913-F7CC589986AE/a9/38ed6798/TouchType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Input/ITouchMovedHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F2625FD8-44AA-4DD5-B6A3-882F24F14D79/a8/a06e3504/ICollection`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Tik-Tok-Sim/Assets/Scripts/DragHandler/DragHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/29A6C194-5F57-4474-95FC-AD42118554C7/b8/d867beac/LinkedListNode`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F2625FD8-44AA-4DD5-B6A3-882F24F14D79/b3/2eb72bdd/IReadOnlyCollection`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sources/Input/ITouchMovedHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/51C9FC2D-1BE0-48CF-A2DD-679DEAA7D4F7/65/0d073f75/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/29A6C194-5F57-4474-95FC-AD42118554C7/04/2611c012/LinkedList`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6AF207EC-D210-4462-8913-F7CC589986AE/2b/6783f80d/Touch.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Find-The-Sheep/Assets/Sources/Core/HiddenObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6AF207EC-D210-4462-8913-F7CC589986AE/4f/c9a949e5/TouchPhase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/29A6C194-5F57-4474-95FC-AD42118554C7/b8/d867beac/LinkedListNode`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F2625FD8-44AA-4DD5-B6A3-882F24F14D79/b3/2eb72bdd/IReadOnlyCollection`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9BAEBF9A-F865-4167-8FD1-5BFDBF5F26EB/62/e860b918/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Sources/UnitView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Input/TouchHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Input/PointerHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Input/ScreenRaycaster.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Components/InputHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Core/Simulator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Core/GridPresenter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Unit.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Tickable/UnitMover.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Tickable/Idle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Tickable/Fall.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Behaviour/IFixedTickListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Behaviour/TickHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Tickable/UnitMoveSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Behaviour/ITickListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Tickable/Spawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitConfigs.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Tickable/UnitSpawnSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Core/Combination.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Core/Combinations.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Input/IInputProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Extensions/VectorExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Tickable/UnitFallSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Tickable/WaitState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Tickable/WaitReadyState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Tickable/CheckState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Core/Variation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Tickable/FallDelayState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Input/PointerProvider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Input/TouchProvider.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Tickable/UnitView.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Tickable/UnitMatchSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Tickable/GridVisualizer.cs" />
@@ -149,14 +86,45 @@
         <option value="$PROJECT_DIR$/Assets/Sources/Tickable/FallState.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Tickable/Grid.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Tickable/TickableInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Installers/InputInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Core/Grid.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/Cell.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Installers/GridInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Core/TickableInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Installers/SystemInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Installers/FactoryInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Services/ServiceLocator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Installers/GridInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Input/IInputProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Extensions/VectorExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Input/TouchProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Grid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/SwapVisualizator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/SwapVisualization.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GlobalEvents/EventManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitStates/Idle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitStates/ReadyToFall.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitStates/Falling.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitStates/Landed.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitFallSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitSwapSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitMatchSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitDestroySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitMatchSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/CellView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Unit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Installers/FactoryInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Installers/VisualizationInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GlobalEvents/EventDefinitions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/UnitFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Installers/SystemInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Visualization/GridVisualization.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Visualization/FallVisualization.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Input/PointerProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Variation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitSwapSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitDestroySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Visualization/SwapVisualization.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Visualization/UnitDestroyVisualization.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Installers/InputInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Core/Systems/UnitFallSystem.cs" />
       </list>
     </option>
   </component>
@@ -215,7 +183,8 @@
       <workItem from="1650610529391" duration="12109000" />
       <workItem from="1650865173533" duration="15233000" />
       <workItem from="1650949539420" duration="23661000" />
-      <workItem from="1651038880254" duration="18825000" />
+      <workItem from="1651038880254" duration="26476000" />
+      <workItem from="1651124131233" duration="19537000" />
     </task>
     <servers />
   </component>
@@ -244,6 +213,10 @@
       <screen x="0" y="0" width="1974" height="1152" />
     </state>
     <state x="754" y="300" key="RiderGenerateDialog/0.0.1974.1152@0.0.1974.1152" timestamp="1650353153656" />
+    <state width="387" height="446" key="SwitcherDM" timestamp="1651140836896">
+      <screen x="0" y="0" width="1974" height="1152" />
+    </state>
+    <state width="387" height="446" key="SwitcherDM/0.0.1974.1152@0.0.1974.1152" timestamp="1651140836896" />
     <state x="644" y="269" key="run.anything.popup" timestamp="1651053582262">
       <screen x="0" y="0" width="1974" height="1152" />
     </state>
